@@ -190,7 +190,7 @@ export default function Home() {
       </Button>
     </a>
   </div>
-  <p className="mt-4 text-center text-sm">Made by Likith Yadav</p>
+  <p className="mt-4 text-center text-sm">Developed by Likith Yadav</p>
 </footer>
     </div>
   );
