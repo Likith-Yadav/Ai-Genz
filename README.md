@@ -2,6 +2,9 @@
 
 Welcome to **AI-GenZ**, a modern and interactive website showcasing cutting-edge AI concepts and projects.
 
+![Screenshot (141)](https://github.com/user-attachments/assets/d9fb30c4-c98f-44cb-9a42-8d46e060c58e)
+
+
 ## Table of Contents
 
 - [About the Project](#about-the-project)
