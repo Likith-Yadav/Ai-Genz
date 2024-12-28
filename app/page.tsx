@@ -1,10 +1,8 @@
 "use client";
 
 import GithubIcon from "@/components/icons/github-icon";
-import Logo from "@/components/logo";
 import Spinner from "@/components/spinner";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Switch } from "@/components/ui/switch";
 import { Textarea } from "@/components/ui/textarea";
 import imagePlaceholder from "@/public/image-placeholder.png";
@@ -21,7 +19,6 @@ type ImageResponse = {
 export default function Home() {
   const [prompt, setPrompt] = useState("");
   const [iterativeMode, setIterativeMode] = useState(false);
-  const [userAPIKey, setUserAPIKey] = useState("");
   const debouncedPrompt = useDebounce(prompt, 300);
   const [generations, setGenerations] = useState<
     { prompt: string; image: ImageResponse }[]
@@ -37,7 +34,7 @@ export default function Home() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ prompt, userAPIKey, iterativeMode }),
+        body: JSON.stringify({ prompt, iterativeMode }),
       });
 
       if (!res.ok) {
