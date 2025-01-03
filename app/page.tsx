@@ -150,6 +150,20 @@ export default function Home() {
                 </button>
               ))}
             </div>
+            <div className="mt-4 flex justify-center">
+              <button
+                className="rounded-md bg-primary py-2 px-4 text-sm text-primary-foreground shadow-sm transition hover:bg-primary/90"
+                onClick={() => {
+                  if (!activeImage) return;
+                  const link = document.createElement("a");
+                  link.href = `data:image/png;base64,${activeImage.b64_json}`;
+                  link.download = "generated_image.png";
+                  link.click();
+                }}
+              >
+                Download Latest Image
+              </button>
+            </div>
           </div>
         )}
       </div>
@@ -190,7 +204,7 @@ export default function Home() {
       </Button>
     </a>
   </div>
-  <p className="mt-4 text-center text-sm">Developed by Likith Yadav</p>
+  <p className="mt-4 text-center text-sm">Made With ❤️  by Likith Yadav</p>
 </footer>
     </div>
   );
